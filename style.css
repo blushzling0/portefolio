@@ -1,0 +1,323 @@
+/* ==========================================
+   【整个网站的基础设置】
+
+   🟢 暂时不要修改
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* ==========================================
+   【首页】
+
+   第一屏占满整个浏览器窗口。
+========================================== */
+
+.hero {
+
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #000000;
+}
+
+
+/* ==========================================
+   【数字形象视频】
+
+   让 MP4 尽可能铺满屏幕。
+
+   🟢 暂时不要修改
+========================================== */
+
+.avatar-video {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+/* ==========================================
+   【艺术家名字】
+
+   🔴 如果以后想改变大小，
+   可以修改 font-size。
+
+   例如：
+
+   24px → 小
+   40px → 中
+   60px → 大
+========================================== */
+
+.artist-name {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 40px;
+
+    color: white;
+
+    font-size: 32px;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+/* ==========================================
+   【SCROLL】
+
+   🔴 可以修改位置和大小
+========================================== */
+
+.scroll-hint {
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 40px;
+
+    color: white;
+
+    font-size: 14px;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+/* ==========================================
+   【作品区域】
+
+   🔴 以后可以继续调整间距
+========================================== */
+
+.works {
+
+    padding: 100px 40px;
+
+}
+
+
+/* ==========================================
+   【WORKS 标题】
+========================================== */
+
+.works h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 80px;
+
+}
+
+
+/* ==========================================
+   【作品分类】
+========================================== */
+
+.works h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 0.05em;
+
+}
+
+
+/* ==========================================
+   【作品网格】
+
+   现在是三列。
+
+   以后可以改成：
+   2 → 两列
+   3 → 三列
+   4 → 四列
+========================================== */
+
+.works-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+/* ==========================================
+   【单个作品】
+========================================== */
+
+.work-item {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    display: block;
+
+}
+
+
+/* ==========================================
+   【作品缩略图】
+========================================== */
+
+.work-item img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+}
+
+
+/* ==========================================
+   【作品标题】
+========================================== */
+
+.work-info {
+
+    padding-top: 12px;
+
+}
+
+
+.work-info h3 {
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+}
+
+
+.work-info p {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #666666;
+
+}
+
+
+/* ==========================================
+   【ABOUT】
+========================================== */
+
+.about {
+
+    padding: 120px 40px;
+
+    max-width: 700px;
+
+}
+
+
+.about h2 {
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.about p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================
+   【手机适配】
+
+   手机屏幕变窄以后，
+   作品变成两列。
+
+   🟢 暂时不要修改
+========================================== */
+
+@media (max-width: 700px) {
+
+    .works-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .works {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .artist-name {
+
+        left: 20px;
+
+        bottom: 25px;
+
+        font-size: 22px;
+
+    }
+
+
+    .scroll-hint {
+
+        right: 20px;
+
+        bottom: 25px;
+
+    }
+
+}
